@@ -30,12 +30,6 @@ class APP(MDApp):
             self.SHOWMONEY(self.SCOREMONEY)
         else:
             self.SHOWMONEY(self.SCOREMONEY)
-    def runtt(self,NUMBER,CON):
-        self.bet(NUMBER,CON)
-        try:
-            self.SHOWMONEY(self.plus())
-        except:
-            pass
     def bet(self,NUMBER,Coefficient):
         if NUMBER == "" or Coefficient == "":
             return None
@@ -51,8 +45,9 @@ class APP(MDApp):
             RANDOMCHOOSERT=random.randrange(len(self.randomlist))
             self.RANDOMNUM = self.randomlist[RANDOMCHOOSERT]
             self.event = Clock.schedule_interval(self.set_label, 0.1)
-            print(self.SCOREMONEY)
             self.SCOREMONEY = self.plus()
+            print(self.SCOREMONEY)
+            self.SHOWMONEY(self.SCOREMONEY)
             self.WRITE(self.SCOREMONEY)
     def randommaker(self):
         self.randomlist=[]
