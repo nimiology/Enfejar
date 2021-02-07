@@ -1,0 +1,32 @@
+Screen:
+    MDRaisedButton:
+        text: "BET"
+        size_hint_x: 0.5
+        pos_hint: {"center_x":0.5,"center_y":0.3}
+        on_release: app.runtt(input.text,inputCoefficient.text)
+    MDTextFieldRect:
+        hint_text:"How much?"
+        multiline: False
+        id:input
+        size_hint_x: 0.5
+        size_hint_y:0.05
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    MDTextFieldRect:
+        hint_text:"Coefficient"
+        multiline: False
+        id:inputCoefficient
+        size_hint_x: 0.5
+        size_hint_y:0.05
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+
+    MDLabel:
+        text: "0"
+        id: score_label
+        halign: "center"
+        text_color: 0, 0, 0, 1
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        font_style:"H3"
+    MDRaisedButton:
+        text: "0 $"
+        id:Money
+        pos_hint: {"center_x":0.8,"center_y":0.9}
