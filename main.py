@@ -4,8 +4,6 @@ from kivy.clock import Clock
 import random
 import time
 
-#etesal kamel bazi
-#bastan zarib zooodtar
 
 
 
